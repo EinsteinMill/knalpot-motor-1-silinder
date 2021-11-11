@@ -1,0 +1,22 @@
+derajat = float(input("Masukkan Nilai Derajat Katup Buang (umumnya 30 derajat) : "))
+rpmmax = float(input("Masukkan Nilai RPM Tenaga Maximal : "))
+cc = float(input("Masukkan Nilai Kapasitas Mesin (dalam cc) : "))
+
+print(" ")
+print("Derajat Katup Buang : ", derajat )
+print("RPM Tenaga Maximal : ", rpmmax)
+print("Kapasitas Mesin : ", cc ,"cc")
+
+ed = 180 + (derajat)
+P = (850*ed)/ (rpmmax) - 3
+x = (cc)/((P+3)*25)
+sqrt = x**(1/2)
+D = sqrt*2.1
+Pinch = P*2.54
+Dinch = D*2.54
+
+print(" ")
+print("Panjang Ideal : ", "%.2f" % P, "inch")
+print("Panjang Ideal : ", "%.2f" % Pinch, "cm")
+print("Diameter Ideal : ", "%.2f" % D, "inch")
+print("Diameter Ideal : ", "%.2f" % Dinch, "cm")
